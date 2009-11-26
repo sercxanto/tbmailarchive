@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://tbmailarchive/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://tbmailarchive/locale/overlay.dtd">
+<overlay id="tbmailarchive-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+
+  <menupopup id="threadPaneContext">
+    <menuitem id="tbmailarchive-menu" label="&archivemail;" 
+              oncommand="tbmailarchive.onMenuItemCommand(event);"/>
+  </menupopup>
+</overlay>

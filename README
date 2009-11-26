@@ -1,0 +1,36 @@
+tbmailarchive - Thunderbird extension for external archival of mails
+
+The intention is to be able to archive emails with an external application
+outside of thunderbird. The extension does basically the following:
+
+ 1. Save the selected msg in a temporary folder in the filesystem in eml format
+    (meaning the mail as is)
+ 2. Call an external application (or wrapper script) from inside thunderbird
+    with the temporary filename as parameter
+
+The extension code itself can be found in the ext subfolder. Use it as template
+for your own archival solution.
+
+I have not generated a XPI package. If you don't want to generate a XPI
+yourself, you can do a developer install of the extension. Just unzip it in a
+folder of your choice, e.g.  ~/bin/tbmailarchival. Then activate it in
+thunderbird by creating a file called tbmailarchive@georglutz.de in the
+directory extension of your profile directory. In tbmailarchive@georglutz.de
+you have to write the path of the extension directory.
+
+sample.pl is a sample wrapper script which shows stat information of the
+temporary file.
+
+tbmailarchive expects the wrapper script to have a simple command line
+interface: Just the file name a single parameter.  The configuration which
+external script should be launched is done in the user settings file prefs.js
+in thunderbird user profile directory with the settings
+"tbmailarchive.cmdLine1" and "tbmailarchive.cmdLine2".
+
+If the wrapper script is directly executable, e.g. like sample.pl under Linux
+you can just define "tbmailarchive.cmdLine1" with the path to sample.pl . When
+you need to declare a script runtime first e.g. like cscript for the windows
+scripting host declare the path to cscript.exe in "tbmailarchive.cmdLine1" and
+the path to the script (VBS, JS, whatever) in "tbmailarchive.cmdLine2".
+
+See tb-profiledir_example for a usage example.

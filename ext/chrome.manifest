@@ -1,0 +1,8 @@
+content	tbmailarchive	content/
+overlay	chrome://messenger/content/messenger.xul	chrome://tbmailarchive/content/overlay.xul
+
+locale	tbmailarchive	en-US	locale/en-US/
+locale tbmailarchive	de-DE	locale/de-DE/
+
+skin	tbmailarchive	classic/1.0	skin/
+#style	chrome://global/content/customizeToolbar.xul	chrome://tbmailarchive/skin/overlay.css
